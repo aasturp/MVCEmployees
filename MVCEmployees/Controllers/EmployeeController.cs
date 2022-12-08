@@ -41,7 +41,7 @@ namespace MVCEmployees.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Test(int id)
+        public IActionResult GetId(int id)
         {
             var model = service.GetEmployeeById(id);
             return View(model);

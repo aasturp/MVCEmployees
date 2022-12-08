@@ -1,0 +1,17 @@
+﻿@using MVCEmployees.Models @*//direktiv till denna filen*@
+@model Employee //utan denna får vi ingen intellisense i denna filen när vi ska ex. loopa över products
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Employees</title>
+    <body>
+        <h1>Employees</h1>
+        <ul>
+            <li>@Model.ID: @Model.Name, @Model.Email</li>
+        </ul>
+    </body>
+
+</head>
+</html>
