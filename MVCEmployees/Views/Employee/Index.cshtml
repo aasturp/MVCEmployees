@@ -11,7 +11,7 @@
         <ul>
             @foreach (var employee in Model)
             {
-                <li>@employee.ID: @employee.Name, @employee.Email</li>
+                <li> <a href="@employee.ID">@employee.ID:</a>@employee.Name, @employee.Email</li>
             }
         </ul>
         <a asp-controller="employee" asp-action="create">Add employee</a> @*man länkar till GET-anropet create*@

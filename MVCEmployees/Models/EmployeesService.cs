@@ -20,5 +20,11 @@
                 .OrderBy(p => p.ID)
                 .ToArray();
         }
+
+        public Employee GetEmployeeById(int id)
+        {
+            return employees
+                .FirstOrDefault(p=> p.ID == id);
+        }
     }
 }

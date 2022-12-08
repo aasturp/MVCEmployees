@@ -39,5 +39,12 @@ namespace MVCEmployees.Controllers
             service.Add(employee); 
             return RedirectToAction(nameof(Index)); 
         }
+
+        [HttpGet("{id}")]
+        public IActionResult Test(int id)
+        {
+            var model = service.GetEmployeeById(id);
+            return View(model);
+        }
     }
 }
