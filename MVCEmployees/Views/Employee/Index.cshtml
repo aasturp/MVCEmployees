@@ -1,0 +1,21 @@
+﻿@using MVCEmployees.Models @*//direktiv till denna filen*@
+@model Employee[] //utan denna får vi ingen intellisense i denna filen när vi ska ex. loopa över products
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Employees</title>
+    <body>
+        <h1>Employees</h1>
+        <ul>
+            @foreach (var employee in Model)
+            {
+                <li>@employee.ID: @employee.Name, @employee.Email</li>
+            }
+        </ul>
+        <a asp-controller="employee" asp-action="create">Add employee</a> @*man länkar till GET-anropet create*@
+    </body>
+
+</head>
+</html>
